@@ -1,1 +1,1 @@
-# STACK generic data structure.
+# Stack generic data structure library in C.
