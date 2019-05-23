@@ -59,6 +59,10 @@ int main(void)
         printf("(%u|%u) ", tObject.i32Val1, tObject.i32Val2);
     }
     printf("\n\n");
+    
+#if(STACK_STATIC_ALLOCATION == 0)
+    Stack_deallocateDynamic(&tStack);
+#endif
 
     return 0;
 }
