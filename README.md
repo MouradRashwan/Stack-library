@@ -1,1 +1,1 @@
-# Stack generic data structure library written in C.
+# Stack is a generic data structure library written in C.
