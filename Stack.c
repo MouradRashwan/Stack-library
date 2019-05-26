@@ -30,6 +30,24 @@ bool Stack_allocateDynamic(Stack_t *ptStack, int32_t i32StackLen, int32_t i32Ele
     }
 }
 
+bool Stack_reallocateDynamic(Stack_t *ptStack, int32_t i32NewStackLen)
+{
+    void *pvData;
+
+    pvData = (void *)realloc(ptStack->pvArray, i32NewStackLen * ptStack->i32ElementSize);
+
+    if(pvData == NULL)
+    {
+        return false;
+    }
+    else
+    {
+        ptStack->pvArray = pvData;
+        ptStack->i32StackLen = i32NewStackLen;
+        return true;
+    }
+}
+
 void Stack_deallocateDynamic(Stack_t *ptStack)
 {
     free(ptStack->pvArray);

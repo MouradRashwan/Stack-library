@@ -15,6 +15,8 @@ void Stack_allocateStatic(Stack_t *ptStack, void *pvStackArray, int32_t i32Stack
 
 bool Stack_allocateDynamic(Stack_t *ptStack, int32_t i32StackLen, int32_t i32ElementSize);
 
+bool Stack_reallocateDynamic(Stack_t *ptStack, int32_t i32NewStackLen);
+
 void Stack_deallocateDynamic(Stack_t *ptStack);
 
 bool Stack_isEmpty(Stack_t *ptStack);
